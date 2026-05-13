@@ -24,8 +24,8 @@ export default function FuelPage() {
         <GlassCard className="mb-6" testid="fuel-chart">
           <div className="av-overline mb-1">Trends</div>
           <h3 className="font-heading text-xl font-medium mb-4">Refuel timeline</h3>
-          <div className="h-56">
-            <ResponsiveContainer width="100%" height="100%">
+          <div style={{ width: "100%", height: 224 }}>
+            <ResponsiveContainer width="100%" height={224}>
               <LineChart data={chart}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="date" stroke="#748CAB" fontSize={11} />

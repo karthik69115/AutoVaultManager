@@ -25,8 +25,8 @@ export default function ExpensesPage() {
         <GlassCard className="mb-6" testid="expenses-chart">
           <div className="av-overline mb-1">Spend</div>
           <h3 className="font-heading text-xl font-medium mb-4">Monthly summary</h3>
-          <div className="h-56">
-            <ResponsiveContainer width="100%" height="100%">
+          <div style={{ width: "100%", height: 224 }}>
+            <ResponsiveContainer width="100%" height={224}>
               <BarChart data={chart}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="month" stroke="#748CAB" fontSize={11} />
