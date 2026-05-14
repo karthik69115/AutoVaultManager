@@ -1,0 +1,116 @@
+/* ══════════════════════════════════════════════════════════════════
+   AutoVault V2 — CSS Design System Variables
+   Jewel & Luxury Archetype | Swiss Data Control
+   ══════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ── Neo-Brutalism Color Palette ────────────────────────────────────────────── */
+  --ink:       #FFFFFF;   /* Main background (White) */
+  --space:     #FFFFFF;   /* Card background */
+  --slate:     #000000;   /* Deep Black for borders/shadows */
+  --steel:     #333333;   /* Dark gray for secondary text */
+  --eggshell:  #000000;   /* Primary text (Black) */
+  --cream:     #555555;   /* Muted text */
+  --accent:    #FFE500;   /* Safety Yellow for accents */
+  --on-accent: #000000;   /* Text color on top of yellow accent */
+
+  /* ── Semantic Colors ──────────────────────────────────────────── */
+  --color-bg:         var(--ink);
+  --color-surface:    var(--space);
+  --color-border:     var(--slate);
+  --color-border-hover: var(--slate);
+  --color-text-primary:   var(--eggshell);
+  --color-text-secondary: var(--steel);
+  --color-text-muted:     var(--cream);
+  --color-accent:     var(--accent);
+  --color-danger:     #FF3366; /* Vibrant Red */
+  --color-success:    #00E676; /* Vibrant Green */
+  --color-input-bg:   #FFFFFF;
+  --color-focus-bg:   #FFFBE6;
+
+  /* ── Typography ───────────────────────────────────────────────── */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body:    'Space Mono', monospace; /* Using monospace for the body to add to the brutalist vibe */
+
+  --text-xs:   0.8rem;
+  --text-sm:   0.95rem;
+  --text-base: 1.1rem;
+  --text-lg:   1.25rem;
+  --text-xl:   1.5rem;
+  --text-2xl:  1.75rem;
+  --text-3xl:  2.25rem;
+  --text-4xl:  3rem;
+  --text-5xl:  4.5rem;
+
+  --weight-light:   400;
+  --weight-regular: 500;
+  --weight-medium:  600;
+  --weight-semibold:700;
+  --weight-bold:    800;
+  --weight-black:   900;
+
+  --leading-tight:  1.2;
+  --leading-snug:   1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed:1.625;
+
+  --tracking-wide:  -0.02em; /* Tighter tracking for brutalism */
+  --tracking-wider: 0em;
+
+  /* ── Spacing Scale ────────────────────────────────────────────── */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+
+  /* ── Border Radius ────────────────────────────────────────────── */
+  --radius-sm:  0px;
+  --radius-md:  0px;
+  --radius-lg:  0px;
+  --radius-xl:  0px;
+  --radius-full:0px; /* Brutalism typically avoids border-radius or uses it very minimally. Let's make it sharp. */
+
+  /* ── Shadows ──────────────────────────────────────────────────── */
+  --shadow-sm:  2px 2px 0px #000000;
+  --shadow-md:  4px 4px 0px #000000;
+  --shadow-lg:  8px 8px 0px #000000;
+  --shadow-glow:4px 4px 0px #000000;
+
+  /* ── Transitions ──────────────────────────────────────────────── */
+  --transition-fast:  150ms ease;
+  --transition-base:  250ms ease;
+  --transition-slow:  400ms ease;
+
+  /* ── Layout ───────────────────────────────────────────────────── */
+  --sidebar-width: 260px;
+  --header-height: 72px;
+}
+
+[data-theme="dark"] {
+  --ink:       #080808;   /* Deepest Void background */
+  --space:     #000000;   /* Pure Black for cards */
+  --slate:     #FFFFFF;   /* Stark White for borders */
+  --steel:     #999999;   /* Mid gray for secondary text */
+  --eggshell:  #FFFFFF;   /* Stark White for primary text */
+  --cream:     #555555;   /* Darker gray for muted text */
+  --accent:    #FFE500;   /* Keeping the iconic Safety Yellow */
+  --on-accent: #000000;   /* Ensure text is black on yellow for perfect contrast */
+
+  /* White shadows on black backgrounds create that premium brutalist pop */
+  --shadow-sm:  2px 2px 0px #FFFFFF;
+  --shadow-md:  4px 4px 0px #FFFFFF;
+  --shadow-lg:  8px 8px 0px #FFFFFF;
+  --shadow-glow:4px 4px 0px #FFFFFF;
+
+  --color-input-bg:   #000000;
+  --color-focus-bg:   #111111;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoVault | Digital Garage</title>
+  <meta name="description" content="AutoVault — A premium digital garage to track your vehicles, maintenance, fuel, and expenses in one place.">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       AUTH PAGE — shown when user is not logged in
+       ══════════════════════════════════════════════════════ -->
+  <div id="auth-page" class="auth-page">
+
+    <!-- Left: Cinematic Hero -->
+    <div class="auth-hero">
+      <img
+        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop&q=80"
+        alt="Luxury car in dark garage"
+        loading="eager"
+      >
+      <div class="auth-hero-overlay"></div>
+      <div class="auth-hero-text">
+        <div class="av-overline" style="margin-bottom:var(--sp-3)">AutoVault</div>
+        <h1 class="auth-hero-title">Every vehicle.<br>Every kilometer.<br>Remembered.</h1>
+        <p class="auth-hero-sub">A precision tool for drivers who care about the details.</p>
+      </div>
+    </div>
+
+    <!-- Right: Auth Form -->
+    <div class="auth-form-side">
+      <div class="auth-logo">
+        <div class="auth-logo-icon"><i class="ph ph-car"></i></div>
+        <div>
+          <div class="auth-logo-name">AutoVault</div>
+          <div class="auth-logo-sub">Digital Garage</div>
+        </div>
+      </div>
+
+      <h2 class="auth-title" id="auth-title">Welcome back.</h2>
+
+      <form class="auth-form" id="auth-form">
+        <!-- Name (hidden on login) -->
+        <div id="name-wrap" style="display:none">
+          <div class="av-form-group">
+            <label class="av-form-label" for="auth-name">Full Name</label>
+            <input type="text" class="av-input" id="auth-name" placeholder="Your name" autocomplete="name">
+          </div>
+        </div>
+
+        <div class="av-form-group">
+          <label class="av-form-label" for="auth-email">Email</label>
+          <input type="email" class="av-input" id="auth-email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+
+        <div class="av-form-group">
+          <label class="av-form-label" for="auth-password">Password</label>
+          <input type="password" class="av-input" id="auth-password" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+
+        <div class="auth-error" id="auth-error"></div>
+
+        <button type="submit" class="auth-submit" id="auth-submit">Sign in</button>
+      </form>
+
+      <button class="auth-toggle" id="auth-toggle">Don't have an account? Register</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       APP SHELL — shown when user is authenticated
+       ══════════════════════════════════════════════════════ -->
+  <div id="app-shell" class="app-shell" style="display:none;min-height:100vh">
+
+    <!-- Sidebar -->
+    <aside class="av-sidebar" id="sidebar">
+      <div class="av-logo">
+        <div class="av-logo-icon"><i class="ph ph-car"></i></div>
+        <div>
+          <div class="av-logo-name">AutoVault</div>
+          <div class="av-logo-sub">Digital Garage</div>
+        </div>
+      </div>
+
+      <nav class="av-nav" id="sidebar-nav">
+        <!-- Populated by app.js -->
+      </nav>
+
+      <!-- Sidebar footer: user info + sign out -->
+      <div class="av-sidebar-footer">
+        <div class="av-user-info">
+          <div class="av-user-avatar" id="sidebar-user-avatar">D</div>
+          <div>
+            <div class="av-user-name" id="sidebar-user-name">Demo Driver</div>
+            <div class="av-user-email" id="sidebar-user-email">demo@autovault.app</div>
+          </div>
+        </div>
+        <button class="av-btn av-btn-ghost" id="theme-toggle-btn" style="width:100%;justify-content:center;margin-bottom:var(--sp-2)">
+          <i class="ph ph-moon"></i> <span>Midnight Vault</span>
+        </button>
+        <button class="av-btn av-btn-ghost" id="sign-out-btn" style="width:100%;justify-content:center">
+          <i class="ph ph-sign-out"></i> Sign out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="av-main" id="main-content">
+      <div class="av-loader"><div class="av-spinner"></div></div>
+    </main>
+
+  </div>
+
+  <!-- App Entry Point (ES Module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
